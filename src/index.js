@@ -1,8 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './styles/index.css';
-import Header from './components/header';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./styles/index.scss";
+import Home from "./pages/home";
+import Apropos from "./pages/a-propos"
+import Header from "./components/header";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -10,6 +12,10 @@ root.render(
   <React.StrictMode>
     <Router>
       <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<Apropos />} />
+      </Routes>
     </Router>
   </React.StrictMode>
 );

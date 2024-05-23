@@ -1,12 +1,12 @@
-import './App.css';
+import React from 'react';
+import '../styles/pages-styles/home.scss';
 
-function App() {
+function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
+    <div>
+      
     </div>
   );
 }
 
-export default App;
+export default Home;
