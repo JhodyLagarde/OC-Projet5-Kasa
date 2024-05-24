@@ -1,13 +1,11 @@
-import ''
+import React from 'react'
+import '../styles/components-styles/banner.scss'
 
-function Banner({ title, backgroundSrc }) {
+export default function Banner({ title, image }) {
   return (
     <div className="banner">
-      <p className="banner__title">{title}</p>
-      <div className="banner__background"></div>
-      <img src={backgroundSrc} alt="banner" className="banner__picture" />
+      <h1 className="banner-title">{title}</h1>
+      <img className="banner-img" src={image} alt="Banner" />
     </div>
   )
 }
-
-export default Banner

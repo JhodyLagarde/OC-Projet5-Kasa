@@ -1,7 +1,7 @@
 import logo from '../assets/logo-footer.svg'
 import '../styles/components-styles/footer.scss'
 
-function Footer() {
+export default function Footer() {
   return (
     <footer className="footer">
       <img src={logo} alt="Logo" />
@@ -9,5 +9,3 @@ function Footer() {
     </footer>
   )
 }
-
-export default Footer

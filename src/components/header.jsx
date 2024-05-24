@@ -2,7 +2,7 @@ import logo from '../assets/logo-header.svg'
 import { Link } from 'react-router-dom'
 import '../styles/components-styles/header.scss'
 
-function Header() {
+export default function Header() {
   return (
     <header className="header">
       <img className="logo" src={logo} alt="logo kasa" />
@@ -19,5 +19,3 @@ function Header() {
     </header>
   )
 }
-
-export default Header
