@@ -18,13 +18,13 @@ function Logement() {
 
   return (
     <main>
-      <section>
+      <section className="carrousel-container">
         <Carrousel
           slides={currentLogement.pictures}
           alt={currentLogement.title}
         />
       </section>
-      <section>
+      <section className="info-container">
         <h1>{currentLogement.title}</h1>
         <h2>{currentLogement.location}</h2>
         <div>
@@ -33,7 +33,7 @@ function Logement() {
           ))}
         </div>
       </section>
-      <aside>
+      <aside className="host-container">
         <div>
           <p>{currentLogement.host.name}</p>
           <img
@@ -43,7 +43,7 @@ function Logement() {
         </div>
         <Rate rating={currentLogement.rating} />
       </aside>
-      <section>
+      <section className="collapse-container">
         <Collapse title={`Description`} content={currentLogement.description} />
 
         <Collapse

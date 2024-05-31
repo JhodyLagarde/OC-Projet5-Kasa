@@ -15,13 +15,13 @@ export default function Carrousel({ slides }) {
   }
 
   return (
-    <section className="carrousel">
+    <div className="carrousel">
       {length > 1 && (
         <img
           src={bckArrow}
           alt="gauche"
           onClick={prevSlide}
-          className="leftArrow"
+          className="carrousel__arrow carrousel__arrow__leftArrow"
         />
       )}
       {length > 1 && (
@@ -29,7 +29,7 @@ export default function Carrousel({ slides }) {
           src={fwdArrow}
           alt="droite"
           onClick={nextSlide}
-          className="rightArrow"
+          className="carrousel__arrow carrousel__arrow__rightArrow"
         />
       )}
       {slides.map((slide, id, title) => (
@@ -43,6 +43,6 @@ export default function Carrousel({ slides }) {
           )}
         </div>
       ))}
-    </section>
+    </div>
   )
 }

@@ -1,4 +1,15 @@
-.collapse-container{
-    margin: 0;
+@import '../color-variables';
+
+main {
     padding: 0 100px;
+}
+.carrousel-container {
+    position: relative;
+	height: 415px;
+    margin: 1rem 3rem;
+}
+.info-container {
+    h1 {
+    color: #ff6060;
+    }
 }
