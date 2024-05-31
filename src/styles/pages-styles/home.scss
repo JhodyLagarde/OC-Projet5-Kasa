@@ -1,0 +1,10 @@
+@import '../color-variables';
+
+.logements-cards-gallery{
+    background-color: $second-color;
+    border-radius: 25px;
+    margin: 0 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
