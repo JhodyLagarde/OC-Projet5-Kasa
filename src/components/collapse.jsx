@@ -19,9 +19,7 @@ export default function Collapse({ title, content }) {
         {title}
         <span onClick={handleCollapse}>{collapseArw}</span>{' '}
       </div>
-      <div className="collapse__content">
-        <p>{content}</p>
-      </div>
+      <div className="collapse__content">{content}</div>
     </div>
   )
 }
