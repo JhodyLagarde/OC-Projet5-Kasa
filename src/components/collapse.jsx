@@ -14,12 +14,14 @@ export default function Collapse({ title, content }) {
   }
 
   return (
-    <div className={`collapse ${active && 'active'}`}>
+    <div className={`collapse ${active && 'collapse-active'}`}>
       <div className="collapse__title">
         {title}
         <span onClick={handleCollapse}>{collapseArw}</span>{' '}
       </div>
-      <div className="collapse__content">{content}</div>
+      <div className="collapse__content">
+        <div>{content}</div>
+      </div>
     </div>
   )
 }

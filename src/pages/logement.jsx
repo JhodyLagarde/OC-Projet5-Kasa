@@ -25,28 +25,31 @@ function Logement() {
         />
       </section>
       <section className="info-container">
-        <h1>{currentLogement.title}</h1>
-        <h2>{currentLogement.location}</h2>
         <div>
-          {currentLogement.tags.map((tag, id) => (
-            <p key={id}>{tag}</p>
-          ))}
+          <h1>{currentLogement.title}</h1>
+          <h2>{currentLogement.location}</h2>
+          <div className="info-container__tags">
+            {currentLogement.tags.map((tag, id) => (
+              <p key={id}>{tag}</p>
+            ))}
+          </div>
         </div>
+        <aside className="info-container__host-rating">
+          <div className="info-container__host-rating__host">
+            <p>{currentLogement.host.name}</p>
+            <img
+              src={currentLogement.host.picture}
+              alt={`portrait de ${currentLogement.host.name}`}
+            />
+          </div>
+          <Rate rating={currentLogement.rating} />
+        </aside>
       </section>
-      <aside className="host-container">
-        <div>
-          <p>{currentLogement.host.name}</p>
-          <img
-            src={currentLogement.host.picture}
-            alt={`portrait de ${currentLogement.host.name}`}
-          />
-        </div>
-        <Rate rating={currentLogement.rating} />
-      </aside>
-      <section className="collapse-container">
+      <section className="logement-collapse-container">
         <Collapse title={`Description`} content={currentLogement.description} />
 
         <Collapse
+          className="collapse-container"
           title={`Equipements`}
           content={currentLogement.equipments.map((equipements, id) => (
             <div className="equipement-list" key={id}>

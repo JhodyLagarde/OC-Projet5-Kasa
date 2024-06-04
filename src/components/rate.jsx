@@ -10,7 +10,7 @@ export default function Rate(props) {
   const rating = props.rating
   const totalStars = [1, 2, 3, 4, 5]
   return (
-    <div>
+    <div className="info-container__host-rating__rating">
       {totalStars.map((rangeElem) =>
         rating >= rangeElem ? (
           <span key={rangeElem.toString()} className="rating-stars__active">

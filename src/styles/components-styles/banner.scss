@@ -1,12 +1,14 @@
-.cards__container{
-    padding: 50px;
-}
 .banner{
-    margin: 0;
-    padding: 0px 100px 43px 100px;
+    position: relative;
+    margin-bottom: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 750px) {
+        height: 110px;
+        justify-content: left;
+    }
 
     .banner__title{
         position: absolute;
@@ -14,6 +16,11 @@
         font-size: 48px;
         color: white;
         text-shadow: 2px 3px 10px black;
+
+        @media (max-width: 750px) {
+            font-size: 24px;
+            left: 5%;
+        }
     }
     .banner__img{
         border-radius: 25px;
@@ -22,6 +29,10 @@
         height: 223px;
         filter: brightness(40%);
         box-shadow: 3px 3px 15px black;
+
+        @media (max-width: 750px) {
+            height: 110px;
+        }
     }
 }
 

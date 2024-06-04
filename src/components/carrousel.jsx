@@ -33,8 +33,14 @@ export default function Carrousel({ slides }) {
         />
       )}
       {slides.map((slide, id, title) => (
-        <div key={id} className={current === id ? 'slider active' : 'slider'}>
-          {id === current && <img src={slide} alt={title} />}
+        <div
+          key={id}
+          className={current === id ? 'slider slider-active' : 'slider'}
+        >
+          {id === current && (
+            <img className="slider__image" src={slide} alt={title} />
+          )}
+
           {id === current && (
             <span className="slider__number">
               {' '}

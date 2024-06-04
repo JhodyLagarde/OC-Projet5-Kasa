@@ -1,3 +1,36 @@
-.rating-stars__active {
-    color: #ff6060;
+@import "../color-variables.scss";
+.info-container__host-rating__rating{
+    display: flex;
+    margin-top: 21px;
+    justify-content: end;
+    gap: 10px;
+    width: 100%;
+
+    @media (max-width: 750px) {
+        justify-content: left;
+        margin-top: 0;
+    }
+
+    .rating-stars{
+        color: $color-stars-rate-inactive;
+        
+        &__active {
+            color: $main-color;
+            font-size: 24.75px;
+
+            @media (max-width: 750px) {
+                font-size: 18px;
+            }
+
+        }
+
+        .fa-star {
+            font-size: 24.75px; 
+            
+            @media (max-width: 750px) {
+                font-size: 18px;
+            }
+            
+        }
+    }
 }

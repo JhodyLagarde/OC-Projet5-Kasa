@@ -1,15 +1,116 @@
 @import '../color-variables';
 
-main {
-    padding: 0 100px;
-}
 .carrousel-container {
     position: relative;
 	height: 415px;
-    margin: 1rem 3rem;
+    margin-bottom: 30px;
+
+    @media (max-width: 750px) {
+        height: 255px;
+    }
+
 }
 .info-container {
-    h1 {
-    color: #ff6060;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @media (max-width: 750px) {
+        flex-direction: column;
     }
+
+    h1 {
+        color: $main-color;
+        font-size: 36px;
+        font-weight: 500;
+        margin: 0;
+
+        @media (max-width: 750px) {
+            font-size: 18px;
+        }
+
+    }
+    
+    h2{
+        font-size: 18px;
+        font-weight: 500;
+
+        @media (max-width: 750px) {
+            font-size: 14px;
+        }
+
+    }
+
+    &__tags{
+        display: flex;
+        gap: 10px;
+
+        p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            width: 150px;
+            height: 25px;
+            background-color: $main-color;
+            border-radius: 10px;
+
+            @media (max-width: 750px) {
+                font-size: 10px;
+            }
+
+        }
+    }
+    &__host-rating{
+
+        @media (max-width: 750px) {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__host{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+
+            p{
+                font-size: 18px;
+                color: $main-color;
+                text-align: end;
+                width: 80px;
+            }
+
+            img{
+                border-radius: 100px;
+
+                @media (max-width: 750px) {
+                    width: 60px;
+                }
+
+            }
+        }
+    }
+}
+
+.logement-collapse-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+
+    @media (max-width: 750px) {
+        flex-direction: column;
+        gap: 30px;
+
+    }
+
+    &__content{
+        width: 100%;
+    }
+
 }
