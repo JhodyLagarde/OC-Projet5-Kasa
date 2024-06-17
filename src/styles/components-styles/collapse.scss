@@ -9,6 +9,7 @@
     &__title{
         font-size: 18px;
         font-weight: 700;
+        line-height: 25.67px;
         background-color: $main-color;
         display: flex;
         flex-direction: row;
@@ -21,9 +22,11 @@
         
         @media (max-width: 750px) {
             font-size: 13px;
+            line-height: 18.54px;
         }
         
         >span{
+            align-items: center;
             transform: rotate(0deg);
             transition: all 500ms ease-in-out;
 
@@ -45,7 +48,12 @@
         transition: grid-template-rows 500ms;
         
         >div{
+            font-size: 18px;
             overflow: hidden;
+
+            @media (max-width: 750px) {
+                font-size: 12px;
+            }
         }
     }        
 }    
