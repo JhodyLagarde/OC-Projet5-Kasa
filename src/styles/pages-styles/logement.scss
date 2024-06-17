@@ -92,6 +92,7 @@
 
             @media (max-width: 750px) {
                 margin-bottom: 0;
+                align-items: last baseline;
             }
 
             p{
@@ -115,6 +116,7 @@
                 @media (max-width: 750px) {
                     width: 32px;
                     height: 32px;
+                    align-self: center;
                 }
 
             }
